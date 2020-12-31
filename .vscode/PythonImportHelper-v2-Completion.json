@@ -1,0 +1,729 @@
+[
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.postgres.fields",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.postgres.fields",
+        "description": "django.contrib.postgres.fields",
+        "detail": "django.contrib.postgres.fields",
+        "documentation": {}
+    },
+    {
+        "label": "ArrayField",
+        "importPath": "django.contrib.postgres.fields",
+        "description": "django.contrib.postgres.fields",
+        "isExtraImport": true,
+        "detail": "django.contrib.postgres.fields",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "django_server.models",
+        "description": "django_server.models",
+        "isExtraImport": true,
+        "detail": "django_server.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "django_server.models",
+        "description": "django_server.models",
+        "isExtraImport": true,
+        "detail": "django_server.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "importPath": "django_server.models",
+        "description": "django_server.models",
+        "isExtraImport": true,
+        "detail": "django_server.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "SexEnum",
+        "importPath": "django_server.const",
+        "description": "django_server.const",
+        "isExtraImport": true,
+        "detail": "django_server.const",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "enum",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "enum",
+        "description": "enum",
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "django_server",
+        "description": "django_server",
+        "isExtraImport": true,
+        "detail": "django_server",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "require_http_methods",
+        "importPath": "django.views.decorators.http",
+        "description": "django.views.decorators.http",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.http",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "getpass",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "getpass",
+        "description": "getpass",
+        "detail": "getpass",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "web.django_server.migrations.0001_initial",
+        "description": "web.django_server.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Member',\n            fields=[\n                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "web.django_server.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "web.django_server.scripts.delete_members",
+        "description": "web.django_server.scripts.delete_members",
+        "peekOfCode": "def run(*args):\n    Member.objects.all().delete()\n    User.objects.all().delete()\n    print('All members are deleted.')",
+        "detail": "web.django_server.scripts.delete_members",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "web.django_server.scripts.init_db",
+        "description": "web.django_server.scripts.init_db",
+        "peekOfCode": "def run(*args):\n    members = [\n        {\n            'name': '홍길동',\n            'email': 'kdhong@hanaui.net',\n            'password': '12345',\n            'birth': datetime.date(1997, 10, 19),\n            'sex': SexEnum.MALE.value,\n            'phone': '010-1234-5678',\n            'tags': ['가족모임리더', '소명센터'],",
+        "detail": "web.django_server.scripts.init_db",
+        "documentation": {}
+    },
+    {
+        "label": "BaseEnum",
+        "kind": 6,
+        "importPath": "web.django_server.const",
+        "description": "web.django_server.const",
+        "peekOfCode": "class BaseEnum(enum.Enum):\n    @classmethod\n    def to_choice(cls):\n        return [(tag.value, tag) for tag in cls]\n    @classmethod\n    def values(cls, excepts=[]):\n        return [tag.value for tag in cls if tag not in excepts]\n    @classmethod\n    def of(cls, value):\n        if value is None:",
+        "detail": "web.django_server.const",
+        "documentation": {}
+    },
+    {
+        "label": "SexEnum",
+        "kind": 6,
+        "importPath": "web.django_server.const",
+        "description": "web.django_server.const",
+        "peekOfCode": "class SexEnum(BaseEnum):\n    MALE = 'm'\n    FEMALE = 'f'",
+        "detail": "web.django_server.const",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "kind": 6,
+        "importPath": "web.django_server.models",
+        "description": "web.django_server.models",
+        "peekOfCode": "class BaseModel(models.Model):\n    created_at = models.DateTimeField(auto_now_add=True)\n    modified_at = models.DateTimeField(auto_now=True)\n    class Meta:\n        abstract = True\nclass Member(BaseModel):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    name = models.CharField(max_length=32, blank=True)\n    phone = models.CharField(max_length=14, null=True)\n    birth = models.DateField()",
+        "detail": "web.django_server.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "kind": 6,
+        "importPath": "web.django_server.models",
+        "description": "web.django_server.models",
+        "peekOfCode": "class Member(BaseModel):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    name = models.CharField(max_length=32, blank=True)\n    phone = models.CharField(max_length=14, null=True)\n    birth = models.DateField()\n    sex = models.CharField(max_length=1)\n    tags = ArrayField(models.CharField(max_length=200), null=True)\n    is_active = models.BooleanField(default=False)\n    last_signin = models.DateTimeField(null=True)\n    def __str__(self):",
+        "detail": "web.django_server.models",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = '9=@3d2qpct#uk&if198m&)**ifkhnmk@4ulsa^8$+rrq65hqbg'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "SECRET_KEY = '9=@3d2qpct#uk&if198m&)**ifkhnmk@4ulsa^8$+rrq65hqbg'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "ALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django_extensions',",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django_extensions',\n    'django_server',\n    'corsheaders',",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ORIGIN_ALLOW_ALL",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "CORS_ORIGIN_ALLOW_ALL = True\nCORS_ALLOW_CREDENTIALS = True\nCORS_ALLOW_METHODS = [\n    'DELETE',\n    'GET',\n    'OPTIONS',\n    'PATCH',\n    'POST',\n    'PUT',\n]",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_CREDENTIALS",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "CORS_ALLOW_CREDENTIALS = True\nCORS_ALLOW_METHODS = [\n    'DELETE',\n    'GET',\n    'OPTIONS',\n    'PATCH',\n    'POST',\n    'PUT',\n]\nCORS_ALLOW_HEADERS = [",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_METHODS",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "CORS_ALLOW_METHODS = [\n    'DELETE',\n    'GET',\n    'OPTIONS',\n    'PATCH',\n    'POST',\n    'PUT',\n]\nCORS_ALLOW_HEADERS = [\n    'accept',",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_HEADERS",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "CORS_ALLOW_HEADERS = [\n    'accept',\n    'accept-encoding',\n    'authorization',\n    'content-type',\n    'dnt',\n    'origin',\n    'user-agent',\n    'x-csrftoken',\n    'x-requested-with',",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "ROOT_URLCONF = 'django_server.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')]\n        ,\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')]\n        ,\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'django_server.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/2.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql_psycopg2',\n        'NAME': os.environ['DB_NAME'],\n        'USER': os.environ['DB_USER'],\n        'PASSWORD': os.environ['DB_PASS'],\n        'HOST': os.environ['DB_SERVICE'],",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql_psycopg2',\n        'NAME': os.environ['DB_NAME'],\n        'USER': os.environ['DB_USER'],\n        'PASSWORD': os.environ['DB_PASS'],\n        'HOST': os.environ['DB_SERVICE'],\n        'PORT': os.environ['DB_PORT'],\n        'OPTIONS': {\n            'application_name': os.environ.get('DB_APPNAME', 'django')",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SESSION_SERIALIZER",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'formatters': {\n        'verbose': {\n            'format': '%(levelname)s %(asctime)s %(filename)s:%(lineno)d %(message)s'\n        },\n    },\n    'handlers': {",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGGING",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "LOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'formatters': {\n        'verbose': {\n            'format': '%(levelname)s %(asctime)s %(filename)s:%(lineno)d %(message)s'\n        },\n    },\n    'handlers': {\n        'console': {",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/2.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = (\n    os.path.join(BASE_DIR, 'static'),",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/2.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = (\n    os.path.join(BASE_DIR, 'static'),\n)",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/2.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = (\n    os.path.join(BASE_DIR, 'static'),\n)\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_L10N",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/2.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = (\n    os.path.join(BASE_DIR, 'static'),\n)\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nSHELL_PLUS = 'ipython'",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/2.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = (\n    os.path.join(BASE_DIR, 'static'),\n)\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nSHELL_PLUS = 'ipython'\nSHELL_PLUS_PRE_IMPORTS = (",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATICFILES_DIRS = (\n    os.path.join(BASE_DIR, 'static'),\n)\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nSHELL_PLUS = 'ipython'\nSHELL_PLUS_PRE_IMPORTS = (\n    ('django_server.models', '*'),\n)",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "STATICFILES_DIRS = (\n    os.path.join(BASE_DIR, 'static'),\n)\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nSHELL_PLUS = 'ipython'\nSHELL_PLUS_PRE_IMPORTS = (\n    ('django_server.models', '*'),\n)",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nSHELL_PLUS = 'ipython'\nSHELL_PLUS_PRE_IMPORTS = (\n    ('django_server.models', '*'),\n)",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SHELL_PLUS",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "SHELL_PLUS = 'ipython'\nSHELL_PLUS_PRE_IMPORTS = (\n    ('django_server.models', '*'),\n)",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SHELL_PLUS_PRE_IMPORTS",
+        "kind": 5,
+        "importPath": "web.django_server.settings",
+        "description": "web.django_server.settings",
+        "peekOfCode": "SHELL_PLUS_PRE_IMPORTS = (\n    ('django_server.models', '*'),\n)",
+        "detail": "web.django_server.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "web.django_server.urls",
+        "description": "web.django_server.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('admin/', admin.site.urls),\n]",
+        "detail": "web.django_server.urls",
+        "documentation": {}
+    },
+    {
+        "label": "signup",
+        "kind": 2,
+        "importPath": "web.django_server.views",
+        "description": "web.django_server.views",
+        "peekOfCode": "def signup(request):\n    name = request.POST.get('name')\n    email = request.POST.get('email')\n    password = request.POST.get('password')\n    birth = request.POST.get('birth')\n    sex = request.POST.get('sex')\n    phone = request.POST.get('phone')\n    return redirect('index')\n@require_http_methods(['POST'])\ndef modify(request):",
+        "detail": "web.django_server.views",
+        "documentation": {}
+    },
+    {
+        "label": "modify",
+        "kind": 2,
+        "importPath": "web.django_server.views",
+        "description": "web.django_server.views",
+        "peekOfCode": "def modify(request):\n    pass\n@require_http_methods(['GET'])\ndef index(request):\n    member_list = Member.objects.all()\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})",
+        "detail": "web.django_server.views",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "web.django_server.views",
+        "description": "web.django_server.views",
+        "peekOfCode": "def index(request):\n    member_list = Member.objects.all()\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})",
+        "detail": "web.django_server.views",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "web.django_server.views",
+        "description": "web.django_server.views",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@require_http_methods(['POST'])\ndef signup(request):\n    name = request.POST.get('name')\n    email = request.POST.get('email')\n    password = request.POST.get('password')\n    birth = request.POST.get('birth')\n    sex = request.POST.get('sex')\n    phone = request.POST.get('phone')\n    return redirect('index')",
+        "detail": "web.django_server.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "web.django_server.wsgi",
+        "description": "web.django_server.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "web.django_server.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "web.manage",
+        "description": "web.manage",
+        "peekOfCode": "def main():\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_server.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"\n        ) from exc",
+        "detail": "web.manage",
+        "documentation": {}
+    },
+    {
+        "label": "get_tag",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def get_tag():\n    tag = datetime.datetime.utcnow().strftime(\"%Y%m%d%H%M%S\")\n    whoami = getpass.getuser()\n    tag += \"_{}\".format(whoami.decode(\"utf-8\").replace(\"\\n\", \"\"))\n    return tag\ndef execute_remote(commands):\n    command = \" && \".join(commands)\n    print(f\"[EXEC] {command}\")\n    remote_command = f\"ssh {ACCOUNT}@{HOSTS} '( {command} ) || ( echo \\\"{FALSE_SENTINEL}\\\" 1>&2 )'\"\n    p = subprocess.Popen(remote_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "execute_remote",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def execute_remote(commands):\n    command = \" && \".join(commands)\n    print(f\"[EXEC] {command}\")\n    remote_command = f\"ssh {ACCOUNT}@{HOSTS} '( {command} ) || ( echo \\\"{FALSE_SENTINEL}\\\" 1>&2 )'\"\n    p = subprocess.Popen(remote_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)\n    lines = []\n    success = True\n    for line in p.stdout:\n        line = line.decode('utf8').rstrip()\n        if line == FALSE_SENTINEL:",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "git_pull",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def git_pull(branch_name=\"master\"):\n    commands = [\n        f\"cd {PROJECT_HOME}\",\n        f\"git fetch --all\",\n        f\"git reset --hard origin/{branch_name}\",\n    ]\n    print(\"#### GIT Pull ######\")\n    out = execute_remote(commands)\n    if \"git_pull_error\" in out:\n        raise Exception('[ERROR] git files cp failed.')",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "build_docker",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def build_docker(targets):\n    if 'web' in targets:\n        commands = [\n            f\"cd {PROJECT_HOME}/web\",\n            f\"python3 dockerfile_generator.py prod\",\n            f\"cd {PROJECT_HOME}\",\n            f\"{DOCKER_COMPOSE} build web\",\n        ]\n        print(f\"#### Build web docker images ######\")\n        execute_remote(commands)",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "restart_targets",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def restart_targets(targets):\n    if targets:\n        target_str = \" \".join(targets)\n        commands = [\n            f\"cd {PROJECT_HOME}\",\n            f\"{DOCKER_COMPOSE} kill {target_str}\",\n            f\"{DOCKER_COMPOSE} up -d {target_str}\",\n        ]\n        print(f\"#### Restart {targets} ######\")\n        execute_remote(commands)",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def main(args):\n    git_pull(args.branch)\n    if args.target == 'all':\n        targets = TARGETS\n    elif args.target == \"none\":\n        targets = []\n    else:\n        targets = args.target.split()\n    if args.build:\n        build_docker(targets)",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "ACCOUNT",
+        "kind": 5,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "ACCOUNT = 'deploy'\nHOSTS = 'srchmdl-django-example.ay1.krane.9rum.cc'\nPROJECT_HOME = '~/demo'\nTARGETS = ['web']\nDOCKER_COMPOSE = f\"sudo docker-compose -f docker-compose-prod.yml\"\nFALSE_SENTINEL = \"_____FALSE______\"\ndef get_tag():\n    tag = datetime.datetime.utcnow().strftime(\"%Y%m%d%H%M%S\")\n    whoami = getpass.getuser()\n    tag += \"_{}\".format(whoami.decode(\"utf-8\").replace(\"\\n\", \"\"))",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "HOSTS",
+        "kind": 5,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "HOSTS = 'srchmdl-django-example.ay1.krane.9rum.cc'\nPROJECT_HOME = '~/demo'\nTARGETS = ['web']\nDOCKER_COMPOSE = f\"sudo docker-compose -f docker-compose-prod.yml\"\nFALSE_SENTINEL = \"_____FALSE______\"\ndef get_tag():\n    tag = datetime.datetime.utcnow().strftime(\"%Y%m%d%H%M%S\")\n    whoami = getpass.getuser()\n    tag += \"_{}\".format(whoami.decode(\"utf-8\").replace(\"\\n\", \"\"))\n    return tag",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "PROJECT_HOME",
+        "kind": 5,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "PROJECT_HOME = '~/demo'\nTARGETS = ['web']\nDOCKER_COMPOSE = f\"sudo docker-compose -f docker-compose-prod.yml\"\nFALSE_SENTINEL = \"_____FALSE______\"\ndef get_tag():\n    tag = datetime.datetime.utcnow().strftime(\"%Y%m%d%H%M%S\")\n    whoami = getpass.getuser()\n    tag += \"_{}\".format(whoami.decode(\"utf-8\").replace(\"\\n\", \"\"))\n    return tag\ndef execute_remote(commands):",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "TARGETS",
+        "kind": 5,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "TARGETS = ['web']\nDOCKER_COMPOSE = f\"sudo docker-compose -f docker-compose-prod.yml\"\nFALSE_SENTINEL = \"_____FALSE______\"\ndef get_tag():\n    tag = datetime.datetime.utcnow().strftime(\"%Y%m%d%H%M%S\")\n    whoami = getpass.getuser()\n    tag += \"_{}\".format(whoami.decode(\"utf-8\").replace(\"\\n\", \"\"))\n    return tag\ndef execute_remote(commands):\n    command = \" && \".join(commands)",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "DOCKER_COMPOSE",
+        "kind": 5,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "DOCKER_COMPOSE = f\"sudo docker-compose -f docker-compose-prod.yml\"\nFALSE_SENTINEL = \"_____FALSE______\"\ndef get_tag():\n    tag = datetime.datetime.utcnow().strftime(\"%Y%m%d%H%M%S\")\n    whoami = getpass.getuser()\n    tag += \"_{}\".format(whoami.decode(\"utf-8\").replace(\"\\n\", \"\"))\n    return tag\ndef execute_remote(commands):\n    command = \" && \".join(commands)\n    print(f\"[EXEC] {command}\")",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "FALSE_SENTINEL",
+        "kind": 5,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "FALSE_SENTINEL = \"_____FALSE______\"\ndef get_tag():\n    tag = datetime.datetime.utcnow().strftime(\"%Y%m%d%H%M%S\")\n    whoami = getpass.getuser()\n    tag += \"_{}\".format(whoami.decode(\"utf-8\").replace(\"\\n\", \"\"))\n    return tag\ndef execute_remote(commands):\n    command = \" && \".join(commands)\n    print(f\"[EXEC] {command}\")\n    remote_command = f\"ssh {ACCOUNT}@{HOSTS} '( {command} ) || ( echo \\\"{FALSE_SENTINEL}\\\" 1>&2 )'\"",
+        "detail": "deploy",
+        "documentation": {}
+    }
+]

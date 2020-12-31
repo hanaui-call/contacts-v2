@@ -2,6 +2,7 @@ import logging
 
 from django.shortcuts import render, redirect
 from django.views.decorators.http import require_http_methods
+from django_server.models import Member
 
 logger = logging.getLogger(__name__)
 
@@ -25,4 +26,9 @@ def modify(request):
 
 @require_http_methods(['GET'])
 def index(request):
-    return render(request, 'index.html', {})
+    member_list = Member.objects.all()
+    search_name = request.GET.get('search_name')
+    if search_name:
+        member_list = member_list.filter(name__icontains=search_name)
+
+    return render(request, 'index.html', {'member_list': member_list})

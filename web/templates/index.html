@@ -1,40 +1,67 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{{ name }}</title>
-  </head>
-  <body>
-    <h1>{{ name }}</h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Level</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>adela</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>jin</td>
-          <td>10</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- FONTS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Gothic:wght@700&family=Nanum+Myeongjo:wght@700&display=swap"
+    rel="stylesheet">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+  <title>ㅎ.ㄴ.ㅇ. CONTACT</title>
+</head>
+
+<body>
+  <h1 style="font-family: 'Lobster', cursive; margin-top: .6rem; margin-left: 1rem;">
+    <a href="{% url 'index'%}">hanaui contact</a>
+  </h1>
+  <hr>
+  <form action="" method="get">
+    <div style="width: 20rem; float:left; margin-right: 1rem; margin-left: 1rem;">
+      <input type="text" class="form-control" name="search_name" value="{{ search_name }}" placeholder="이름을 입력하세요">
+    </div>
+    <span class="input-group-btn">
+      <input class="btn btn-default" type="submit" value="Search">
+    </span>
+  </form>
+  <hr>
+  <div class="row">
+    <div style="margin-left: 3rem">
+      {% for member in member_list %}
+      <h6>{{ member.name }}</h6>
+      {% endfor %}
+      {% if search_name and search_name in member_list %}
+      {% for member in member_list %}
+      <h6>{{ search_name }}</h6>
+      {% endfor %}
+      {% endif %}
+      {% if search_name and search_name not in member_list %}
+      <h6>이름이 존재하지 않습니다.</h6>
+      {% endif %}
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
