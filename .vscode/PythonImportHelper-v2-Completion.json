@@ -568,7 +568,7 @@
         "kind": 5,
         "importPath": "web.django_server.urls",
         "description": "web.django_server.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('admin/', admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('admin/', admin.site.urls),\n    path('signup/', views.signup, name='signup'),\n]",
         "detail": "web.django_server.urls",
         "documentation": {}
     },
@@ -577,7 +577,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def signup(request):\n    name = request.POST.get('name')\n    email = request.POST.get('email')\n    password = request.POST.get('password')\n    birth = request.POST.get('birth')\n    sex = request.POST.get('sex')\n    phone = request.POST.get('phone')\n    return redirect('index')\n@require_http_methods(['POST'])\ndef modify(request):",
+        "peekOfCode": "def signup(request):\n    if request.method == 'GET':\n        return render(request, 'signup.html', {})\n    else:\n        name = request.POST.get('name')\n        email = request.POST.get('email')\n        password = request.POST.get('password')\n        birth = request.POST.get('birth')\n        sex = request.POST.get('sex')\n        phone = request.POST.get('phone')",
         "detail": "web.django_server.views",
         "documentation": {}
     },
@@ -586,7 +586,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def modify(request):\n    pass\n@require_http_methods(['GET'])\ndef index(request):\n    member_list = Member.objects.all().order_by('name')\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})",
+        "peekOfCode": "def modify(request):\n    pass\n@require_http_methods(['GET'])\ndef index(request):\n    member_list = Member.objects.all().order_by('name')\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})\n@require_http_methods(['POST'])",
         "detail": "web.django_server.views",
         "documentation": {}
     },
@@ -595,7 +595,16 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def index(request):\n    member_list = Member.objects.all().order_by('name')\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})",
+        "peekOfCode": "def index(request):\n    member_list = Member.objects.all().order_by('name')\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})\n@require_http_methods(['POST'])\ndef detail(request):\n    pass",
+        "detail": "web.django_server.views",
+        "documentation": {}
+    },
+    {
+        "label": "detail",
+        "kind": 2,
+        "importPath": "web.django_server.views",
+        "description": "web.django_server.views",
+        "peekOfCode": "def detail(request):\n    pass",
         "detail": "web.django_server.views",
         "documentation": {}
     },
@@ -604,7 +613,7 @@
         "kind": 5,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n@require_http_methods(['POST'])\ndef signup(request):\n    name = request.POST.get('name')\n    email = request.POST.get('email')\n    password = request.POST.get('password')\n    birth = request.POST.get('birth')\n    sex = request.POST.get('sex')\n    phone = request.POST.get('phone')\n    return redirect('index')",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@require_http_methods(['GET', 'POST'])\ndef signup(request):\n    if request.method == 'GET':\n        return render(request, 'signup.html', {})\n    else:\n        name = request.POST.get('name')\n        email = request.POST.get('email')\n        password = request.POST.get('password')\n        birth = request.POST.get('birth')",
         "detail": "web.django_server.views",
         "documentation": {}
     },

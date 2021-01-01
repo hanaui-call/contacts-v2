@@ -1,0 +1,11 @@
+<span style="font-family: 'Lobster', cursive;">
+    <h2>
+      <a href="{% url 'index' %}">hanaui contact</a>
+    </h2>
+    </span>
+    <span>
+      <form method="get" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <input class="btn btn-primary" type="submit" value="Signup">
+      </form>
+    </span>

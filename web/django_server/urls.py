@@ -21,4 +21,5 @@ from django_server import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
+    path('signup/', views.signup, name='signup'),
 ]
