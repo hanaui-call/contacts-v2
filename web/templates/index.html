@@ -33,16 +33,12 @@
   <hr>
   <div class="row">
     <div style="margin-left: 3rem">
+      {% if member_list %}
       {% for member in member_list %}
-      <h6>{{ member.name }}</h6>
+        <h6>{{ member.name }}</h6>
       {% endfor %}
-      {% if search_name and search_name in member_list %}
-      {% for member in member_list %}
-      <h6>{{ search_name }}</h6>
-      {% endfor %}
-      {% endif %}
-      {% if search_name and search_name not in member_list %}
-      <h6>이름이 존재하지 않습니다.</h6>
+      {% else %}
+        <h6>이름이 존재하지 않습니다.</h6>
       {% endif %}
 
     </div>

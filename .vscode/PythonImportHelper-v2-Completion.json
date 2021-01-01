@@ -206,6 +206,14 @@
         "documentation": {}
     },
     {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -578,7 +586,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def modify(request):\n    pass\n@require_http_methods(['GET'])\ndef index(request):\n    member_list = Member.objects.all()\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})",
+        "peekOfCode": "def modify(request):\n    pass\n@require_http_methods(['GET'])\ndef index(request):\n    member_list = Member.objects.all().order_by('name')\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})",
         "detail": "web.django_server.views",
         "documentation": {}
     },
@@ -587,7 +595,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def index(request):\n    member_list = Member.objects.all()\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})",
+        "peekOfCode": "def index(request):\n    member_list = Member.objects.all().order_by('name')\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})",
         "detail": "web.django_server.views",
         "documentation": {}
     },

@@ -3,6 +3,7 @@ import logging
 from django.shortcuts import render, redirect
 from django.views.decorators.http import require_http_methods
 from django_server.models import Member
+from django.contrib.auth.decorators import login_required
 
 logger = logging.getLogger(__name__)
 
@@ -23,10 +24,9 @@ def signup(request):
 def modify(request):
     pass
 
-
 @require_http_methods(['GET'])
 def index(request):
-    member_list = Member.objects.all()
+    member_list = Member.objects.all().order_by('name')
     search_name = request.GET.get('search_name')
     if search_name:
         member_list = member_list.filter(name__icontains=search_name)
