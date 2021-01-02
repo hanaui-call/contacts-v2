@@ -41,6 +41,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -267,6 +283,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "web.django_server.migrations.0002_auto_20210101_1819",
+        "description": "web.django_server.migrations.0002_auto_20210101_1819",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('django_server', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='member',\n            name='email',\n            field=models.EmailField(blank=True, max_length=255),\n        ),",
+        "detail": "web.django_server.migrations.0002_auto_20210101_1819",
+        "documentation": {}
+    },
+    {
         "label": "run",
         "kind": 2,
         "importPath": "web.django_server.scripts.delete_members",
@@ -307,7 +332,7 @@
         "kind": 6,
         "importPath": "web.django_server.models",
         "description": "web.django_server.models",
-        "peekOfCode": "class BaseModel(models.Model):\n    created_at = models.DateTimeField(auto_now_add=True)\n    modified_at = models.DateTimeField(auto_now=True)\n    class Meta:\n        abstract = True\nclass Member(BaseModel):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    name = models.CharField(max_length=32, blank=True)\n    phone = models.CharField(max_length=14, null=True)\n    birth = models.DateField()",
+        "peekOfCode": "class BaseModel(models.Model):\n    created_at = models.DateTimeField(auto_now_add=True)\n    modified_at = models.DateTimeField(auto_now=True)\n    class Meta:\n        abstract = True\nclass Member(BaseModel):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    name = models.CharField(max_length=32, blank=True)\n    phone = models.CharField(max_length=14, null=True)\n    email = models.EmailField(max_length=255, blank=True)",
         "detail": "web.django_server.models",
         "documentation": {}
     },
@@ -316,7 +341,7 @@
         "kind": 6,
         "importPath": "web.django_server.models",
         "description": "web.django_server.models",
-        "peekOfCode": "class Member(BaseModel):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    name = models.CharField(max_length=32, blank=True)\n    phone = models.CharField(max_length=14, null=True)\n    birth = models.DateField()\n    sex = models.CharField(max_length=1)\n    tags = ArrayField(models.CharField(max_length=200), null=True)\n    is_active = models.BooleanField(default=False)\n    last_signin = models.DateTimeField(null=True)\n    def __str__(self):",
+        "peekOfCode": "class Member(BaseModel):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    name = models.CharField(max_length=32, blank=True)\n    phone = models.CharField(max_length=14, null=True)\n    email = models.EmailField(max_length=255, blank=True)\n    password = models.CharField(max_length=50, null=True)\n    birth = models.DateField()\n    sex = models.CharField(max_length=1)\n    tags = ArrayField(models.CharField(max_length=200), null=True)\n    is_active = models.BooleanField(default=False)",
         "detail": "web.django_server.models",
         "documentation": {}
     },
@@ -577,7 +602,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def signup(request):\n    if request.method == 'GET':\n        return render(request, 'signup.html', {})\n    else:\n        name = request.POST.get('name')\n        email = request.POST.get('email')\n        password = request.POST.get('password')\n        birth = request.POST.get('birth')\n        sex = request.POST.get('sex')\n        phone = request.POST.get('phone')",
+        "peekOfCode": "def signup(request):\n    if request.method == 'GET':\n        return render(request, 'signup.html', {})\n    else:\n        user = Member.objects.create(\n            name = request.POST.get('name'),\n            email = request.POST.get('email'),\n            password = request.POST.get('password'),\n            birth = request.POST.get('birth'),\n            sex = request.POST.get('sex'),",
         "detail": "web.django_server.views",
         "documentation": {}
     },
@@ -613,7 +638,7 @@
         "kind": 5,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n@require_http_methods(['GET', 'POST'])\ndef signup(request):\n    if request.method == 'GET':\n        return render(request, 'signup.html', {})\n    else:\n        name = request.POST.get('name')\n        email = request.POST.get('email')\n        password = request.POST.get('password')\n        birth = request.POST.get('birth')",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@require_http_methods(['GET', 'POST'])\ndef signup(request):\n    if request.method == 'GET':\n        return render(request, 'signup.html', {})\n    else:\n        user = Member.objects.create(\n            name = request.POST.get('name'),\n            email = request.POST.get('email'),\n            password = request.POST.get('password'),",
         "detail": "web.django_server.views",
         "documentation": {}
     },

@@ -13,12 +13,14 @@ def signup(request):
     if request.method == 'GET':
         return render(request, 'signup.html', {})
     else:
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        birth = request.POST.get('birth')
-        sex = request.POST.get('sex')
-        phone = request.POST.get('phone')
+        user = Member.objects.create(
+            name = request.POST.get('name'),
+            email = request.POST.get('email'),
+            password = request.POST.get('password'),
+            birth = request.POST.get('birth'),
+            sex = request.POST.get('sex'),
+            phone = request.POST.get('phone')    
+        )
         return redirect('index')
 
 

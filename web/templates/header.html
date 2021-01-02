@@ -1,11 +1,8 @@
-<span style="font-family: 'Lobster', cursive;">
-    <h2>
-      <a href="{% url 'index' %}">hanaui contact</a>
-    </h2>
-    </span>
-    <span>
-      <form method="get" action="{% url 'signup' %}">
-        {% csrf_token %}
-        <input class="btn btn-primary" type="submit" value="Signup">
-      </form>
-    </span>
+<span style="font-size:2rem; font-family: 'Lobster', cursive; margin-top: 3rem;">
+  <a href="{% url 'index' %}">hanaui contact</a>
+</span>
+<span style="margin-top: 3rem; margin-left: 10rem;" class="input-group-btn">
+  <a href="{% url 'signup' %}">
+    <input type="submit" class="btn btn-default col-1 md-1" value="Sign-up">
+  </a>
+</span>
