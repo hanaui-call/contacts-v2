@@ -1,6 +1,6 @@
 import logging
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_http_methods
 from django_server.models import Member
 from django.contrib.auth.decorators import login_required
@@ -24,7 +24,9 @@ def signup(request):
         return redirect('index')
 
 
-@require_http_methods(['POST'])
+
+
+@require_http_methods(['GET', 'POST'])
 def modify(request):
     pass
 
@@ -37,7 +39,10 @@ def index(request):
 
     return render(request, 'index.html', {'member_list': member_list})
 
-@require_http_methods(['POST'])
-def detail(request):
-    pass
+
+@require_http_methods(['GET'])
+def detail_info(request, pk):
+    primary_key = request.POST.get('member.user.email')
+    member = Member.objects.all().filter(email=primary_key)
+    return render(request, 'detail.html', {'member': member, 'pk': primary_key})
     

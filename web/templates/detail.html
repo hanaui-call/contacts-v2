@@ -2,19 +2,16 @@
 {% load static %}
 
 {% block content %}
-<div class="row">
-  <div style="margin-left: 3rem">
-    {% if member_list %}
-    {% for member in member_list %}
-    <a href="{% url 'detail' pk=member.user.email %}">
-      <h6>{{ member.name }} : {{ member.phone }}</h6>
-    </a>
-    {% endfor %}
-    {% else %}
-    <h6>이름이 존재하지 않습니다.</h6>
-    {% endif %}
-
-  </div>
+<form method="post" action="{% url 'detail' pk=pk %}">
+  <div class="row">
+    <div style="margin-left: 3rem">
+      <h6>{{ member.name }}</h6>
+      <h6>{{ member.user.email }}</h6>
+      <h6>{{ member.phone }}</h6>
+      <h6>{{ member.sex }}</h6>
+      <h6>{{ member.tag }}</h6>
+</form>
+</div>
 </div>
 
 
