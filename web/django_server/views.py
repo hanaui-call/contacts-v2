@@ -23,9 +23,6 @@ def signup(request):
         )
         return redirect('index')
 
-
-
-
 @require_http_methods(['GET', 'POST'])
 def modify(request):
     pass
@@ -42,7 +39,6 @@ def index(request):
 
 @require_http_methods(['GET'])
 def detail_info(request, pk):
-    primary_key = request.POST.get('member.user.email')
-    member = Member.objects.all().filter(email=primary_key)
-    return render(request, 'detail.html', {'member': member, 'pk': primary_key})
+    member = get_object_or_404(Member, pk=pk)
+    return render(request, 'detail.html', {'member': member})
     

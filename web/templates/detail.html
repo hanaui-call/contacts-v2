@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-<form method="post" action="{% url 'detail' pk=pk %}">
   <div class="row">
     <div style="margin-left: 3rem">
       <h6>{{ member.name }}</h6>
@@ -10,12 +9,8 @@
       <h6>{{ member.phone }}</h6>
       <h6>{{ member.sex }}</h6>
       <h6>{{ member.tag }}</h6>
-</form>
-</div>
-</div>
-
-
-
+    </div>
+  </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

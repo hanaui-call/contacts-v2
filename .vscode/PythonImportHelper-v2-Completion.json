@@ -619,7 +619,7 @@
         "kind": 5,
         "importPath": "web.django_server.urls",
         "description": "web.django_server.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('admin/', admin.site.urls),\n    path('signup/', views.signup, name='signup'),\n    path('detail/<str:pk>', views.detail_info, name='detail'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('admin/', admin.site.urls),\n    path('signup/', views.signup, name='signup'),\n    path('detail/<int:pk>', views.detail_info, name='detail'),\n]",
         "detail": "web.django_server.urls",
         "documentation": {}
     },
@@ -646,7 +646,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def index(request):\n    member_list = Member.objects.all().order_by('name')\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})\n@require_http_methods(['GET'])\ndef detail_info(request, pk):\n    primary_key = request.POST.get('member.user.email')\n    member = Member.objects.all().filter(email=primary_key)",
+        "peekOfCode": "def index(request):\n    member_list = Member.objects.all().order_by('name')\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})\n@require_http_methods(['GET'])\ndef detail_info(request, pk):\n    member = get_object_or_404(Member, pk=pk)\n    return render(request, 'detail.html', {'member': member})",
         "detail": "web.django_server.views",
         "documentation": {}
     },
@@ -655,7 +655,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def detail_info(request, pk):\n    primary_key = request.POST.get('member.user.email')\n    member = Member.objects.all().filter(email=primary_key)\n    return render(request, 'detail.html', {'member': member, 'pk': primary_key})",
+        "peekOfCode": "def detail_info(request, pk):\n    member = get_object_or_404(Member, pk=pk)\n    return render(request, 'detail.html', {'member': member})",
         "detail": "web.django_server.views",
         "documentation": {}
     },

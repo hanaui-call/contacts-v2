@@ -6,7 +6,7 @@
   <div style="margin-left: 3rem">
     {% if member_list %}
     {% for member in member_list %}
-    <a href="{% url 'detail' pk=member.user.email %}">
+    <a href="{% url 'detail' pk=member.id %}">
       <h6>{{ member.name }} : {{ member.phone }}</h6>
     </a>
     {% endfor %}
