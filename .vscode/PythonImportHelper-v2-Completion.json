@@ -122,6 +122,14 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
         "label": "SexEnum",
         "importPath": "django_server.const",
         "description": "django_server.const",
@@ -148,6 +156,14 @@
     },
     {
         "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -619,8 +635,17 @@
         "kind": 5,
         "importPath": "web.django_server.urls",
         "description": "web.django_server.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('admin/', admin.site.urls),\n    path('signup/', views.signup, name='signup'),\n    path('detail/<int:pk>', views.detail_info, name='detail'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('admin/', admin.site.urls),\n    path('login/', views.login, name='login'),\n    path('signup/', views.signup, name='signup'),\n    path('detail/<int:pk>', views.detail_info, name='detail'),\n    path('modify/<int:pk>', views.modify, name='modify'),\n]",
         "detail": "web.django_server.urls",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "web.django_server.views",
+        "description": "web.django_server.views",
+        "peekOfCode": "def login(request):\n    if request.method == 'POST':\n        user_email = request.POST['email']\n        password = request.POST['password']\n        user = auth.authenticate(request, email=user_email, password=password)\n        if user is not None:\n            auth.login(request, user)\n            return redirect('index')\n        else:\n            return render(request, 'login.html', {'error': '이메일이나 비번이 정확하지 않습니다.'})",
+        "detail": "web.django_server.views",
         "documentation": {}
     },
     {
@@ -637,7 +662,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def modify(request):\n    pass\n@require_http_methods(['GET'])\ndef index(request):\n    member_list = Member.objects.all().order_by('name')\n    search_name = request.GET.get('search_name')\n    if search_name:\n        member_list = member_list.filter(name__icontains=search_name)\n    return render(request, 'index.html', {'member_list': member_list})\n@require_http_methods(['GET'])",
+        "peekOfCode": "def modify(request, pk):\n    if request.method == 'GET':\n        return render(request, 'modify.html', {'user': user})\n    else:\n        user = Member.objects.update(\n            email = request.POST.get('email'),\n            password = request.POST.get('password'),\n            birth = request.POST.get('birth'),\n            sex = request.POST.get('sex'),\n            phone = request.POST.get('phone')    ",
         "detail": "web.django_server.views",
         "documentation": {}
     },
@@ -664,7 +689,7 @@
         "kind": 5,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n@require_http_methods(['GET', 'POST'])\ndef signup(request):\n    if request.method == 'GET':\n        return render(request, 'signup.html', {})\n    else:\n        user = Member.objects.create(\n            name = request.POST.get('name'),\n            email = request.POST.get('email'),\n            password = request.POST.get('password'),",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@require_http_methods(['GET', 'POST'])\ndef login(request):\n    if request.method == 'POST':\n        user_email = request.POST['email']\n        password = request.POST['password']\n        user = auth.authenticate(request, email=user_email, password=password)\n        if user is not None:\n            auth.login(request, user)\n            return redirect('index')",
         "detail": "web.django_server.views",
         "documentation": {}
     },

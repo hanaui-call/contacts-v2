@@ -6,6 +6,19 @@
     <input type="submit" class="btn btn-default col-1 md-1" value="Sign-up">
   </a>
 </span>
+{% if user is not authenticated %}
+<span style="margin-top: 3rem; margin-left: 1rem;" class="input-group-btn">
+  <a href="{% url 'login' %}">
+    <input type="submit" class="btn btn-default col-1 md-1" value="Log-in">
+  </a>
+</span>
+{% else %}
+<span style="margin-top: 3rem; margin-left: 1rem;" class="input-group-btn">
+  <a href="{% url 'modify' pk=user.id %}">
+    <input type="submit" class="btn btn-default col-1 md-1" value="Modify">
+  </a>
+</span>
+{% endif %}
 <hr>
 <form action="{% url 'index' %}" method="get">
   <div style="width: 20rem; float:left; margin-right: 1rem; margin-left: 1rem;">

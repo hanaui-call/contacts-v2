@@ -1,3 +1,5 @@
+from django.contrib.auth.models import User
+from django.contrib import auth
 import logging
 
 from django.shortcuts import render, redirect, get_object_or_404
@@ -6,6 +8,19 @@ from django_server.models import Member
 from django.contrib.auth.decorators import login_required
 
 logger = logging.getLogger(__name__)
+
+@require_http_methods(['GET', 'POST'])
+def login(request):
+    if request.method == 'POST':
+        user_email = request.POST['email']
+        password = request.POST['password']
+        user = auth.authenticate(request, email=user_email, password=password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect('index')
+        else:
+            return render(request, 'login.html', {'error': '이메일이나 비번이 정확하지 않습니다.'})
+    return render(request, 'login.html')
 
 
 @require_http_methods(['GET', 'POST'])
@@ -23,9 +38,20 @@ def signup(request):
         )
         return redirect('index')
 
+@login_required
 @require_http_methods(['GET', 'POST'])
-def modify(request):
-    pass
+def modify(request, pk):
+    if request.method == 'GET':
+        return render(request, 'modify.html', {'user': user})
+    else:
+        user = Member.objects.update(
+            email = request.POST.get('email'),
+            password = request.POST.get('password'),
+            birth = request.POST.get('birth'),
+            sex = request.POST.get('sex'),
+            phone = request.POST.get('phone')    
+        )
+        return redirect('index')
 
 @require_http_methods(['GET'])
 def index(request):
