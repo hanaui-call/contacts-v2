@@ -15,8 +15,6 @@ class Member(BaseModel):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=32, blank=True)
     phone = models.CharField(max_length=14, null=True)
-    email = models.EmailField(max_length=255, blank=True)
-    password = models.CharField(max_length=50, null=True)
     birth = models.DateField()
     sex = models.CharField(max_length=1)
     tags = ArrayField(models.CharField(max_length=200), null=True)

@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.contrib import auth
+from django.contrib.auth import login, authenticate
 import logging
 
 from django.shortcuts import render, redirect, get_object_or_404
@@ -11,16 +11,17 @@ logger = logging.getLogger(__name__)
 
 @require_http_methods(['GET', 'POST'])
 def login(request):
-    if request.method == 'POST':
-        user_email = request.POST['email']
+    if request.method == 'GET':
+        return render(request, 'login.html', {})
+    else:
+        username = request.POST['email']
         password = request.POST['password']
-        user = auth.authenticate(request, email=user_email, password=password)
+        user = authenticate(username=username, password=password)
         if user is not None:
-            auth.login(request, user)
+            login(request, user)
             return redirect('index')
         else:
-            return render(request, 'login.html', {'error': '이메일이나 비번이 정확하지 않습니다.'})
-    return render(request, 'login.html')
+            return render(request, 'login.html', {'error': '아이디 또는 비밀번호가 정확하지 않습니다.'})
 
 
 @require_http_methods(['GET', 'POST'])
@@ -28,14 +29,15 @@ def signup(request):
     if request.method == 'GET':
         return render(request, 'signup.html', {})
     else:
-        user = Member.objects.create(
+        user = User.objects.create(username=request.POST.get('email'), password=request.POST.get('password'), email=request.POST.get('email'))
+        member = Member.objects.create(
+            user = user,
             name = request.POST.get('name'),
-            email = request.POST.get('email'),
-            password = request.POST.get('password'),
             birth = request.POST.get('birth'),
             sex = request.POST.get('sex'),
             phone = request.POST.get('phone')    
         )
+        
         return redirect('index')
 
 @login_required
@@ -44,13 +46,14 @@ def modify(request, pk):
     if request.method == 'GET':
         return render(request, 'modify.html', {'user': user})
     else:
-        user = Member.objects.update(
-            email = request.POST.get('email'),
-            password = request.POST.get('password'),
+        user = User.objects.update(username=request.POST.get('email'), password=request.POST.get('password'), email=request.POST.get('email'))
+        member = Member.objects.update(
+            user = user,
             birth = request.POST.get('birth'),
             sex = request.POST.get('sex'),
             phone = request.POST.get('phone')    
         )
+        
         return redirect('index')
 
 @require_http_methods(['GET'])
