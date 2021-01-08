@@ -44,7 +44,8 @@ def signup(request):
 @require_http_methods(['GET', 'POST'])
 def modify(request, pk):
     if request.method == 'GET':
-        return render(request, 'modify.html', {'pk':pk})
+        member = Member.objects.get(user=request.user)
+        return render(request, 'modify.html', {'pk':pk, 'member':member})
     else:
         user = User.objects.update(username=request.POST.get('email'), password=request.POST.get('password'), email=request.POST.get('email'))
         member = Member.objects.update(
