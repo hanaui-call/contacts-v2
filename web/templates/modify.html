@@ -2,20 +2,12 @@
 {% load static %}
 
 {% block content %}
-<form method="post" action="{% url 'modify' pk=user.pk %}">
+<form method="post" action="">
   {% csrf_token %}
-  <div class="form-group">
-    <label for="name">{{ member.name }}</label>
-    <!-- <input type="text" placeholder="이름" name="name"> -->
+  <div>
+    {{ member.name}}
   </div>
-  <div class="form-group">
-    <label for="email">이메일</label>
-    <input type="text" placeholder="이메일" name="email">
-  </div>
-  <div class="form-group">
-    <label for="password">비밀번호</label>
-    <input type="password" placeholder="비밀번호" name="password">
-  </div>
+    {{ user.username }}
   <div class="form-group">
     <label for="birth">생년월일</label>
     <input type="date" name="birth">
@@ -28,7 +20,7 @@
   </div>
   <div class="form-group">
     <label for="phone">전화번호</label>
-    <input type="text" placeholder="010-1234-5678" name="phone">
+    <input type="text" placeholder="010-1234-5678" name="phone" value="{{ member.phone }}">
   </div>
   <input type="submit" class="btn btn-default" value="등록">
 </form>

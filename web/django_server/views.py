@@ -43,17 +43,21 @@ def signup(request):
 @login_required
 @require_http_methods(['GET', 'POST'])
 def modify(request, pk):
+    user = request.user
+    member = Member.objects.get(user=user)
     if request.method == 'GET':
-        member = Member.objects.get(user=request.user)
         return render(request, 'modify.html', {'pk':pk, 'member':member})
     else:
-        user = User.objects.update(username=request.POST.get('email'), password=request.POST.get('password'), email=request.POST.get('email'))
-        member = Member.objects.update(
-            user = user,
-            birth = request.POST.get('birth'),
-            sex = request.POST.get('sex'),
-            phone = request.POST.get('phone')    
-        )
+        birth = request.POST.get('birth')
+        sex = request.POST.get('sex')
+        phone = request.POST.get('phone')
+        
+        if birth:
+            member = Member.objects.update(birth=birth)
+        if sex:
+            member = Member.objects.update(sex=sex)
+        if phone:
+            member = Member.objects.update(phone=phone)
         
         return redirect('index')
 

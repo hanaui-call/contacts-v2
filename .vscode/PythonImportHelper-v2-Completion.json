@@ -687,7 +687,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def modify(request, pk):\n    if request.method == 'GET':\n        member = Member.objects.get(user=request.user)\n        return render(request, 'modify.html', {'pk':pk, 'member':member})\n    else:\n        user = User.objects.update(username=request.POST.get('email'), password=request.POST.get('password'), email=request.POST.get('email'))\n        member = Member.objects.update(\n            user = user,\n            birth = request.POST.get('birth'),\n            sex = request.POST.get('sex'),",
+        "peekOfCode": "def modify(request, pk):\n    user = request.user\n    member = Member.objects.get(user=user)\n    if request.method == 'GET':\n        return render(request, 'modify.html', {'pk':pk, 'member':member})\n    else:\n        birth = request.POST.get('birth')\n        sex = request.POST.get('sex')\n        phone = request.POST.get('phone')\n        if birth:",
         "detail": "web.django_server.views",
         "documentation": {}
     },
