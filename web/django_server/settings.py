@@ -187,3 +187,6 @@ SHELL_PLUS = 'ipython'
 SHELL_PLUS_PRE_IMPORTS = (
     ('django_server.models', '*'),
 )
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

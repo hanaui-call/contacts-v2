@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<form method="post" action="">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="email">이메일</label>
+    <input type="text" placeholder="이메일" name="email">
+  </div>
+  <div class="form-group">
+    <label for="password">비밀번호</label>
+    <input type="password" placeholder="비밀번호" name="password">
+  </div>
+  <div>
+    <input type="submit" class="btn btn-default" value="Log-in">
+  </div>
+</form>
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+{% endblock %}

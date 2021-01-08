@@ -1,0 +1,30 @@
+<span style="font-size:2rem; font-family: 'Lobster', cursive; margin-top: 3rem; margin-left: 1rem;">
+  <a href="{% url 'index' %}">hanaui contact</a>
+</span>
+{% if user.is_authenticated %}
+<span style="margin-top: 3rem; margin-left: 1rem;" class="input-group-btn">
+  <a href="{% url 'modify' pk=user.id %}">
+    <input type="submit" class="btn btn-default col-1 md-1" value="Modify">
+  </a>
+</span>
+{% else %}
+<span style="margin-top: 3rem; margin-left: 10rem;" class="input-group-btn">
+  <a href="{% url 'signup' %}">
+    <input type="submit" class="btn btn-default col-1 md-1" value="Sign-up">
+  </a>
+</span>
+<span style="margin-top: 3rem; margin-left: 1rem;" class="input-group-btn">
+  <a href="{% url 'login' %}">
+    <input type="submit" class="btn btn-default col-1 md-1" value="Log-in">
+  </a>
+</span>
+{% endif %}
+<hr>
+<form action="{% url 'index' %}" method="get">
+  <div style="width: 20rem; float:left; margin-right: 1rem; margin-left: 1rem;">
+    <input type="text" class="form-control" name="search_name" value="{{ search_name }}" placeholder="이름을 입력하세요">
+  </div>
+  <span class="input-group-btn" style="margin-left: 1rem;">
+    <input class="btn btn-default col-1 md-1" type="submit" value="Search">
+  </span>
+</form>

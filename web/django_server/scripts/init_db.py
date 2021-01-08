@@ -24,6 +24,15 @@ def run(*args):
             'sex': SexEnum.FEMALE.value,
             'phone': '010-6789-1234',
             'tags': [],
+        },
+        {
+            'name': '이영희',
+            'email': 'yhlee@hanui.net',
+            'password': '24680',
+            'birth': datetime.date(1982, 2, 3),
+            'sex': SexEnum.FEMALE.value,
+            'phone': '010-9785-1234',
+            'tags': [],
         }
     ]
 
