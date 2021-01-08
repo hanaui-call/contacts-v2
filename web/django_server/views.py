@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login as al, authenticate
 import logging
 
 from django.shortcuts import render, redirect, get_object_or_404
@@ -14,11 +14,11 @@ def login(request):
     if request.method == 'GET':
         return render(request, 'login.html', {})
     else:
-        username = request.POST['email']
-        password = request.POST['password']
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            login(request, user)
+        username = request.POST.get('email')
+        password = request.POST.get('password')
+        user = User.objects.get(username=username)
+        if user and user.password == password:
+            al(request, user)
             return redirect('index')
         else:
             return render(request, 'login.html', {'error': '아이디 또는 비밀번호가 정확하지 않습니다.'})
@@ -44,7 +44,7 @@ def signup(request):
 @require_http_methods(['GET', 'POST'])
 def modify(request, pk):
     if request.method == 'GET':
-        return render(request, 'modify.html', {'user': user})
+        return render(request, 'modify.html', {'pk':pk})
     else:
         user = User.objects.update(username=request.POST.get('email'), password=request.POST.get('password'), email=request.POST.get('email'))
         member = Member.objects.update(

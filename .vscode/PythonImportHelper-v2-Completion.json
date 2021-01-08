@@ -669,7 +669,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def login(request):\n    if request.method == 'GET':\n        return render(request, 'login.html', {})\n    else:\n        username = request.POST['email']\n        password = request.POST['password']\n        user = authenticate(username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return redirect('index')",
+        "peekOfCode": "def login(request):\n    if request.method == 'GET':\n        return render(request, 'login.html', {})\n    else:\n        username = request.POST.get('email')\n        password = request.POST.get('password')\n        user = User.objects.get(username=username)\n        if user and user.password == password:\n            al(request, user)\n            return redirect('index')",
         "detail": "web.django_server.views",
         "documentation": {}
     },
@@ -687,7 +687,7 @@
         "kind": 2,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "def modify(request, pk):\n    if request.method == 'GET':\n        return render(request, 'modify.html', {'user': user})\n    else:\n        user = User.objects.update(username=request.POST.get('email'), password=request.POST.get('password'), email=request.POST.get('email'))\n        member = Member.objects.update(\n            user = user,\n            birth = request.POST.get('birth'),\n            sex = request.POST.get('sex'),\n            phone = request.POST.get('phone')    ",
+        "peekOfCode": "def modify(request, pk):\n    if request.method == 'GET':\n        return render(request, 'modify.html', {'pk':pk})\n    else:\n        user = User.objects.update(username=request.POST.get('email'), password=request.POST.get('password'), email=request.POST.get('email'))\n        member = Member.objects.update(\n            user = user,\n            birth = request.POST.get('birth'),\n            sex = request.POST.get('sex'),\n            phone = request.POST.get('phone')    ",
         "detail": "web.django_server.views",
         "documentation": {}
     },
@@ -714,7 +714,7 @@
         "kind": 5,
         "importPath": "web.django_server.views",
         "description": "web.django_server.views",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n@require_http_methods(['GET', 'POST'])\ndef login(request):\n    if request.method == 'GET':\n        return render(request, 'login.html', {})\n    else:\n        username = request.POST['email']\n        password = request.POST['password']\n        user = authenticate(username=username, password=password)\n        if user is not None:",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@require_http_methods(['GET', 'POST'])\ndef login(request):\n    if request.method == 'GET':\n        return render(request, 'login.html', {})\n    else:\n        username = request.POST.get('email')\n        password = request.POST.get('password')\n        user = User.objects.get(username=username)\n        if user and user.password == password:",
         "detail": "web.django_server.views",
         "documentation": {}
     },
